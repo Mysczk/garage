@@ -1,0 +1,199 @@
+:root {
+  --bg: #121212;
+  --panel: #1e1e2f;
+  --text: #e2e2e2;
+  --muted: #aaa;
+  --primary: #7f5af0;
+  --danger: #ff6b6b;
+  --border: #2c2c3c;
+  --hover: #a78bfa;
+  --success: #2dd4bf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+/* === BUTTONS === */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  margin-left: 10px;
+}
+
+.button:hover {
+  background: var(--hover);
+}
+
+.button.logout {
+  background: var(--danger);
+}
+
+.button.logout:hover {
+  background: #e63946;
+}
+
+/* === FORMS === */
+form {
+  background: var(--panel);
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: #1f1f2e;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 1px solid var(--primary);
+}
+
+button {
+  background: var(--primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--hover);
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* === TABLE === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: var(--panel);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: #161625;
+  color: var(--muted);
+}
+
+tr:hover td {
+  background: #2c2c3c;
+}
+
+td a {
+  color: var(--danger);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+td a:hover {
+  color: #ff8787;
+}
+
+/* === MESSAGES === */
+.message {
+  padding: 12px;
+  border-radius: 6px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message.success {
+  background: #1b4332;
+  color: var(--success);
+}
+
+.message.error {
+  background: #3b0d0d;
+  color: #fecaca;
+}
+
+/* === NO DATA === */
+.no-cars {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* === LINKS === */
+a.back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+a.back:hover {
+  color: var(--text);
+}
+
+/* === DROPZONE === */
+.dropzone {
+  border: 2px dashed var(--border);
+  padding: 30px;
+  text-align: center;
+  color: var(--muted);
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  background: #1b1b2d;
+}
+
+.dropzone.dragover {
+  background: var(--primary);
+  border-color: var(--hover);
+  color: white;
+}

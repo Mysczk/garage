@@ -1,0 +1,20 @@
+# Základní image PHP 8 s Apache
+FROM php:8-apache
+
+# Aktualizace systému a běžné nástroje
+RUN apt update && apt upgrade -y && \
+    apt install -y mc vim nano less
+
+# XSLT podpora
+RUN apt install -y libxslt1-dev && \
+    docker-php-ext-install xsl
+
+# MySQL podpora – mysqli a PDO MySQL
+RUN docker-php-ext-install mysqli pdo_mysql && \
+    docker-php-ext-enable mysqli
+
+# Nastavení hostname pro Apache
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Aktivace Apache modulů
+RUN a2enmod rewrite headers

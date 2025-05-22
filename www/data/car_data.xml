@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="car_schema.xsd">
+    <car>
+        <brand>Škoda</brand>
+        <model>Octavia</model>
+        <year>2018</year>
+    </car>
+    <car>
+        <brand>Ford</brand>
+        <model>Fiesta</model>
+        <year>2009</year>
+    </car>
+</cars>
